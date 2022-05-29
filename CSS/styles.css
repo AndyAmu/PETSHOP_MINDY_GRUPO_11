@@ -1,0 +1,9 @@
+body {
+
+    background-image: url(/ASSETS/schnauzer_fondo.jpeg);    
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.493);
+    z-index: 1;
+    background-blend-mode: darken;
+
+}
