@@ -15,33 +15,25 @@ getData();
 
 function mostrarProducto(articulo) {
 	cards.innerHTML +=
-     `<div class="card mb-3 shadow" style="width: 100%;">
-	<div class="row no-gutters">
-		<div class="col-sm-2">
-			<img class="card-img" src="${articulo.imagen}" alt="articulo">
-		</div>
-		<div class="col-sm-10">
-			<div class="card-body">
-				<h5 class="card-title">${articulo.nombre}</h5>
-				<p class="card-text">${articulo.descripcion}</p>
-				<p>Unidades disponibles ${articulo.stock}</p>
-				<div class="d-flex justify-content-around align-items-center">
-					<strong>Precio $${articulo.precio}</strong>
-					<div class="carrito">
-					<button onclick="añadirProducto('${articulo._id}')" class="see-more btn btn-primary">Añadir al carrito</button>
-						<span>en el carrito: ${articulo.carrito}</span>
-						<button onclick="quitarProducto('${articulo._id}')" class="see-more btn btn-primary">quitar del carrito</button>
-					
-					</div>
-				</div>
+    ` 
+	<div class="card mb-4" style="width: 30rem;">
+	
+	<img src="${articulo.imagen}" class="card-img-top" alt="...">
+	<div class="card-body">
+		<h5 class="card-title">${articulo.nombre}</h5>
+		<p class="card-text">${articulo.descripcion}</p>
+		<p class="card-text">${articulo.stock}</p>
+		<p class="card-text">${articulo.precio}</p>
+		<div class="carrito">
+			<button onclick="añadirProducto('${articulo._id}')" class="see-more btn btn-primary">Añadir al carrito</button>
+				<span>en el carrito: ${articulo.carrito}</span>
+				<button onclick="quitarProducto('${articulo._id}')" class="see-more btn btn-primary">quitar del carrito</button>
+				<div class="card-footer mt-2 bg-black text-white text-muted ${articulo.stock > 5 ? 'oculto' : ''}">
+				<p class="footer-card-text">Ultimas unidades!!!</p>	
 			</div>
-			
-		</div>
 	</div>
-	<div class="card-footer bg-danger text-white text-muted ${articulo.stock > 5 ? 'oculto' : ''}">
-		<p class="footer-card-text">Ultimas unidades!!!</p>	
-	</div>
-</div>`
+</div>
+`
 }
 
 
