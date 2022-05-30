@@ -87,16 +87,16 @@ function quitarProducto(idProducto){
 		ProductosAlmacenados = ProductosAlmacenados.filter(elemento => elemento._id != producto._id);
 		if(productoPresente){
 			if(productoPresente.carrito==0){
-				ProductosAlmacenados.push(producto)
 				swal("ya quitaste todos los productos")
 			}
 			else{
 				productoPresente.carrito--;
 				productoPresente.stock++;
-				ProductosAlmacenados.push(productoPresente)
+				if(productoPresente.carrito!=0){
+					ProductosAlmacenados.push(productoPresente)
+				}
+				
 			}
-		}else{
-			ProductosAlmacenados.push(producto)
 		}
 	}else{	
 		ProductosAlmacenados = [producto]
