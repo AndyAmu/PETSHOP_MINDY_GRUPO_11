@@ -1,0 +1,11 @@
+.oculto{
+	display: none;
+}
+.card-img{
+	width: 100%;
+}
+.footer-card-text{
+	margin: 0;
+	color: white;
+	text-align: center;
+}
