@@ -114,7 +114,7 @@ function cargarProductos(productos){
 				producto.stock = productoPresente.stock;
 			}
 			else{
-				producto.carrito = 0
+				producto.carrito = 0 
 			}
 		}else{
 			producto.carrito = 0

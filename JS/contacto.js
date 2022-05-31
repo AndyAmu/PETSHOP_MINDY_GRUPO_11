@@ -5,4 +5,5 @@ function alerta(e){
     e.preventDefault();
 
     swal("Su mensaje fue enviado correctamente, ¡Gracias por escribirnos!");
+    contactForm.reset();
 }
