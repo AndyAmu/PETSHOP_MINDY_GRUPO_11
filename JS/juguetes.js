@@ -131,7 +131,7 @@ function getPrecios(){
 	precios = productos.map(producto =>producto.precio);
 	precios = precios.filter((precio,index) => precios.indexOf(precio) === index);
 	filtroPrecio.innerHTML= `<option selected value="precios">Precios</option>`
-	precios.forEach(precio => filtroPrecio.innerHTML += `<option value="${precio}"> Precio <= ${precio} </option>`)
+	precios.forEach(precio => filtroPrecio.innerHTML += `<option value="${precio}"> Precio: $ ${precio} </option>`)
 }
 filtroPrecio.addEventListener("change", event => {
 	valorfiltroPrecio = event.target.value;
