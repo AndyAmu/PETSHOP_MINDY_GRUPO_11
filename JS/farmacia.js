@@ -76,6 +76,7 @@ function añadirProducto(idProducto){
     
     localStorage.setItem("Productos", JSON.stringify(ProductosAlmacenados))
 	cargarProductos(productos);
+	mostrarCantidadProductos();
 }
 
 function quitarProducto(idProducto){
@@ -104,6 +105,7 @@ function quitarProducto(idProducto){
     
     localStorage.setItem("Productos", JSON.stringify(ProductosAlmacenados))
 	cargarProductos(productos);
+	mostrarCantidadProductos();
 }
 
 function cargarProductos(productos){
