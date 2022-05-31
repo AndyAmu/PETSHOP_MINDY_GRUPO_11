@@ -1,0 +1,139 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header {
+	min-height: 10vh;
+	
+}
+body {
+    background-image: url(../ASSETS/schnauzer_fondo.jpeg);
+    background-position: center center;
+    background-size:cover;
+    background-color: rgba(0, 0, 0, 0.493);
+    z-index: 1;
+    background-blend-mode: darken;
+    color: white;
+    font-size: larger;
+}
+main {
+	min-height: 85vh;
+}
+
+footer {
+background-color: black;
+}
+
+h1 {
+	display: flex;
+	justify-content: center;
+	font-size: 15rem;
+	
+}
+h2, h3 {
+	text-align: center;
+	
+}
+.navbar {
+    background-color:transparent!important;
+}
+
+.contBurger {
+    justify-content: space-around!important;
+}
+
+.nav-link {
+    font-size: x-large;
+    color: antiquewhite!important;
+}
+
+.nav-link:hover {
+    color: white!important;  
+}
+
+.active {
+    color: white!important;
+    border-bottom: 0.2rem solid white;
+}
+
+.active:hover {
+    color: antiquewhite!important;  
+    text-decoration: dashed;
+}
+
+.rowfooter {
+    text-align: center;
+}
+
+.footer {
+    background-color: black;
+    color: antiquewhite!important;
+    border-top:ridge antiquewhite;
+}
+
+.footericons {
+    text-decoration: none;
+}
+
+.logoTop {
+    max-height: 8rem;
+    padding: 0.5rem 2rem;
+}
+
+.navbar-collapse {
+    margin-right: 2rem;
+}
+
+.navbar-toggler {
+    color: antiquewhite!important;
+    background-color: antiquewhite;
+    
+}
+
+.contacto {
+	border-radius: 2rem;
+}
+
+.carousel {
+	width: 50rem;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+}
+.container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.form-control {
+    max-width: 30rem;
+}
+
+.mapText p {
+    min-width: 10vw;
+}
+
+.map-responsive{
+overflow:hidden;
+padding-bottom:56.25%;
+position:relative;
+height:0;
+
+}
+
+.map-responsive iframe{
+left:0;
+top:0;
+height:100%;
+width:100%;
+position:absolute;
+
+}
+
+.row {
+    margin-right: 0!important;
+    margin-left: 0!important;
+}

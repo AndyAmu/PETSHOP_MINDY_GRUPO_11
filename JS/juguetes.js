@@ -8,6 +8,7 @@ async function getData(){
 			productos = json.response;
 			ProductosAlmacenados = JSON.parse(localStorage.getItem("Productos"))
 			cargarProductos();
+<<<<<<< HEAD
             console.log(productos)
 		});
 }
@@ -44,6 +45,39 @@ function mostrarProducto(articulo) {
 </div>`
 }
 
+=======
+		});
+        console.log(productos)
+}
+getData();
+
+function mostrarProducto(articulo) {
+	cards.innerHTML +=
+    ` 
+	<div class="card mb-4" style="width: 30rem;">
+	
+	<img src="${articulo.imagen}" class="card-img-top" alt="...">
+	<div class="card-body text-black">
+		<h5 class="card-title">${articulo.nombre}</h5>
+		<p class="card-text">Stock ${articulo.stock}</p>
+		<p class="card-text">$${articulo.precio}</p>
+        <p class="card-text">${articulo.descripcion}</p>
+        <div"><a href="detalles.html?id=${articulo._id}" class="btn btn-primary">Ver mas!!</a></div>
+		<div class="carrito">
+			<button onclick="añadirProducto('${articulo._id}')" class="see-more btn btn-primary">Añadir al carrito</button>
+				<span>en el carrito: ${articulo.carrito}</span>
+				<button onclick="quitarProducto('${articulo._id}')" class="see-more btn btn-dark">quitar del carrito</button>
+				<div class="card-footer mt-2 bg-warning text-muted ${articulo.stock > 5 ? 'oculto' : ''}">
+				<p class="footer-card-text">Ultimas unidades!!!</p>
+
+			</div>
+	</div>
+</div>
+`
+}
+
+
+>>>>>>> f6478d6ea2b2a47c81f55def01026d7a160c140c
 function añadirProducto(idProducto){
 	let producto = productos.find(elemento => elemento._id === idProducto);
 	ProductosAlmacenados = JSON.parse(localStorage.getItem("Productos"))
