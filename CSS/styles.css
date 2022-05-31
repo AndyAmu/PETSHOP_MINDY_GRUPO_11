@@ -29,6 +29,7 @@ h1 {
 	display: flex;
 	justify-content: center;
 	font-size: 2rem;
+    font-family:'Licorice', cursive;
 	
 }
 h2, h3 {
@@ -139,10 +140,14 @@ position:absolute;
 }
 
 .presentacion{
-    color: black;
+    color: white;
+    -webkit-text-stroke:.8px black;
     font-family:cursive;
+    font-size: 1.3rem ;
+    width: 40rem;
 }
 
 .imagen{
     height:25rem;
 }
+
