@@ -106,7 +106,7 @@ h2, h3 {
 	align-items: center;
 	flex-direction: column;
 }
-/* Imagen gatito*/
+/* Imagen juguetes*/
 h4 {
     display: flex;
     justify-content: center;
@@ -124,3 +124,40 @@ h4 {
     justify-content: center;
 
 }
+
+/* Imagen farmacia*/
+h6 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    background-image: url(../ASSETS/farmacia.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+    height: 35vh;
+    width: 100%;
+}
+/* Colores card */
+.card {
+    background-color: rgba(128, 128, 128, 0.678);
+}
+
+.Stock {
+    background-color: white;
+    border-radius: .5rem;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.card-img {
+    width: 100%;
+    height: 20rem;
+}
+
+.card-body{
+    width: 100%;
+    height: 35rem;
+    
+}
+

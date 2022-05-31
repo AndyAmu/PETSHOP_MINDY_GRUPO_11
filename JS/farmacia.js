@@ -19,33 +19,30 @@ async function getData(){
 getData();
 
 function mostrarProducto(articulo) {
-	cards.innerHTML += `<div class="card mb-3 shadow" style="width: 100%;">
-	<div class="row no-gutters">
-		<div class="col-sm-2">
-			<img class="card-img" src="${articulo.imagen}" alt="articulo">
+	cards.innerHTML += `<div class="card" style="width: 35rem;">
+	<img src="${articulo.imagen}" class="card-img-top card-img" alt="image">
+	<div class="card-body d-flex justify-content-center  flex-column text-center">
+		<h5 class="card-title">${articulo.nombre}</h5>
+		
+		<p class="card-text">Unidades disponibles ${articulo.stock}</p>
+		<p class="card-text">$ ${articulo.precio}</p>
+		<button onclick="añadirProducto('${articulo._id}')" class="see-more btn btn-primary">Agregar <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-plus-fill" viewBox="0 0 16 16">
+						<path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zM9 5.5V7h1.5a.5.5 0 0 1 0 1H9v1.5a.5.5 0 0 1-1 0V8H6.5a.5.5 0 0 1 0-1H8V5.5a.5.5 0 0 1 1 0z"/>
+						</svg></button>
+							<span class="${articulo.carrito==0 ? "oculto": ""}">en el carrito: ${articulo.carrito}</span>
+							<button onclick="quitarProducto('${articulo._id}')" class="see-more btn btn-primary ${articulo.carrito==0 ? "oculto": ""}">Quitar <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-x" viewBox="0 0 16 16">
+							<path d="M7.354 5.646a.5.5 0 1 0-.708.708L7.793 7.5 6.646 8.646a.5.5 0 1 0 .708.708L8.5 8.207l1.146 1.147a.5.5 0 0 0 .708-.708L9.207 7.5l1.147-1.146a.5.5 0 0 0-.708-.708L8.5 6.793 7.354 5.646z"/>
+							<path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+						</svg></button>
+						
+						<div class="card-footer Stock  text-white text-muted">${articulo.stock < 5 ? `<p class="ultimas-unidades text-danger"><small><b>ULTIMAS UNIDADES</b><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-exclamation-lg" viewBox="0 0 16 16">
+		<path d="M7.005 3.1a1 1 0 1 1 1.99 0l-.388 6.35a.61.61 0 0 1-1.214 0L7.005 3.1ZM7 12a1 1 0 1 1 2 0 1 1 0 0 1-2 0Z"/>
+		</svg></small></p>` : `<p class="text-success"><b>En stock</b></p>`}
+		
 		</div>
-		<div class="col-sm-10">
-			<div class="card-body">
-				<h5 class="card-title">${articulo.nombre}</h5>
-				<p class="card-text">${articulo.descripcion}</p>
-				<p>Unidades disponibles ${articulo.stock}</p>
-				<div class="d-flex justify-content-around align-items-center">
-					<strong>Precio $${articulo.precio}</strong>
-					<div class="carrito">
-					<button onclick="añadirProducto('${articulo._id}')" class="see-more btn btn-primary">Añadir al carrito</button>
-						<span class="${articulo.carrito==0 ? "oculto": ""}">en el carrito: ${articulo.carrito}</span>
-						<button onclick="quitarProducto('${articulo._id}')" class="see-more btn btn-primary ${articulo.carrito==0 ? "oculto": ""}">quitar del carrito</button>
-					
-					</div>
-				</div>
-			</div>
-			
-		</div>
+		<p class="card-text mt-4">${articulo.descripcion}</p>
 	</div>
-	<div class="card-footer bg-danger text-white text-muted ${articulo.stock > 5 ? 'oculto' : ''}">
-		<p class="footer-card-text">Ultimas unidades!!!</p>	
-	</div>
-</div>`
+	</div>`
 }
 
 function añadirProducto(idProducto){
@@ -76,6 +73,7 @@ function añadirProducto(idProducto){
     
     localStorage.setItem("Productos", JSON.stringify(ProductosAlmacenados))
 	cargarProductos(productos);
+	mostrarCantidadProductos();
 }
 
 function quitarProducto(idProducto){
@@ -104,6 +102,7 @@ function quitarProducto(idProducto){
     
     localStorage.setItem("Productos", JSON.stringify(ProductosAlmacenados))
 	cargarProductos(productos);
+	mostrarCantidadProductos();
 }
 
 function cargarProductos(productos){
@@ -115,7 +114,7 @@ function cargarProductos(productos){
 				producto.stock = productoPresente.stock;
 			}
 			else{
-				producto.carrito = 0
+				producto.carrito = 0 
 			}
 		}else{
 			producto.carrito = 0
