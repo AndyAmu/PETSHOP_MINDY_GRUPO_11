@@ -16,10 +16,11 @@ getData();
 function mostrarProducto(articulo) {
 	cards.innerHTML +=
     ` 
-	<div class="card mb-4" style="width: 30rem;">
-	
-	<img src="${articulo.imagen}" class="card-img-top" alt="...">
+	<div class="card p2 mb-4" style="width: 40rem;">
+	<div class="card-body">
 	<div class="card-body text-black">
+	<img src="${articulo.imagen}" class="card-img-top" alt="...">
+	
 		<h5 class="card-title">${articulo.nombre}</h5>
 		<p class="card-text">Stock ${articulo.stock}</p>
 		<p class="card-text">$${articulo.precio}</p>
