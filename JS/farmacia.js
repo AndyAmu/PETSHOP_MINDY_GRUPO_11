@@ -25,7 +25,7 @@ function mostrarProducto(articulo) {
 			<img class="card-img" src="${articulo.imagen}" alt="articulo">
 		</div>
 		<div class="col-sm-10">
-			<div class="card-body text-dark">
+			<div class="card-body">
 				<h5 class="card-title">${articulo.nombre}</h5>
 				<p class="card-text">${articulo.descripcion}</p>
 				<p>Unidades disponibles ${articulo.stock}</p>
