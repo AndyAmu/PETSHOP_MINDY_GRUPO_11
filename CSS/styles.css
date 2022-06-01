@@ -279,3 +279,28 @@ position:absolute;
     margin-right: 0!important;
     margin-left: 0!important;
 } 
+
+.carrito-tabla {
+    background-color: rgba(128, 128, 128, 0.308);
+}
+@media (max-width: 425px){
+    .carrito-tabla{
+        font-size: .7rem;
+        text-align: center;
+    }
+    .boton-comprar {
+        font-size: .8rem;
+    }
+}
+@media (max-width: 375px){
+    .carrito-tabla{
+        font-size: .6rem;
+        text-align: center;
+    }
+}
+@media (max-width: 320px){
+    .carrito-tabla{
+        font-size: .5rem;
+        text-align: center;
+    }
+}
