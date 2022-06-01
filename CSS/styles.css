@@ -95,10 +95,19 @@ h2, h3 {
     max-height: 8rem;
     padding: 0.5rem 2rem;
 }
-
+@media (max-width: 720px){
+    .logoTop {
+        transform: translateX(250px);
+    }
+}
+@media (max-width: 500px){
+    .logoTop {
+        transform: translateX(140px);
+    }
+}
 @media (max-width: 425px){
     .logoTop {
-        transform: translateX(120px);
+        transform: translateX(110px);
     }
 }
 @media (max-width: 375px){
