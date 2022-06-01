@@ -64,7 +64,7 @@ h2, h3 {
 }
 
 .nav-link:hover {
-    color: white!important;  
+    color: rgb(0, 0, 0)!important;  
 }
 
 .active {
@@ -73,7 +73,7 @@ h2, h3 {
 }
 
 .active:hover {
-    color: antiquewhite!important;  
+    color: rgb(7, 7, 7)!important;  
     text-decoration: dashed;
 }
 
@@ -127,8 +127,8 @@ h2, h3 {
 }
 
 .navbar-toggler {
-    color: antiquewhite!important;
-    background-color: antiquewhite;
+    color: white;
+    
 }
 .nav-link {
     text-align: center;
@@ -151,7 +151,6 @@ h2, h3 {
     .carousel {
         width: 50rem;
     }
-    ;
 }
 
 
