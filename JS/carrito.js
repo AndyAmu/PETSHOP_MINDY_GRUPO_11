@@ -33,10 +33,10 @@ function MostrarTablaProductos(){
 											<td>${producto.carrito}</td>
 										</tr>`
 		})
-		tablaFooter.innerHTML = `<tr class="table-primary">
+		tablaFooter.innerHTML = `<tr class="table-light">
 					<th scope="row" colspan="2">El precio total es </th>
 					<td>${f.format(precioTotal)}</td>
-					<td><button onclick="realizarCompra()" type="button" class="btn btn-success">Comprar</button></td>
+					<td><button onclick="realizarCompra()" type="button" class="btn btn-success boton-comprar">Comprar</button></td>
 		</tr>`
 	}else{
 		alert('actualmente no tienes ningun producto en el carrito', 'info')
