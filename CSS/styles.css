@@ -60,7 +60,7 @@ h2, h3 {
 
 .nav-link {
     font-size: x-large;
-    color: antiquewhite!important;
+    color: white!important;
 }
 
 .nav-link:hover {
@@ -139,11 +139,13 @@ h2, h3 {
 	border-radius: 2rem;
 	margin-right: 8rem;
 }
+/* Courosel */
 
 .carousel {
 	height: 100%;
 	display: flex;
 	justify-content: center;
+    
 }
 @media (min-width: 776px ){
     .carousel {
@@ -152,12 +154,15 @@ h2, h3 {
     ;
 }
 
+
+/* ------- */
 .container {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
 }
+
 /* Imagen juguetes*/
 h4 {
     display: flex;
@@ -192,7 +197,7 @@ h6 {
 }
 /* Colores card */
 .card {
-    background-color: rgba(128, 128, 128, 0.678);
+    background-color: rgba(128, 128, 128, 0.39);
 }
 
 .Stock {
@@ -212,7 +217,10 @@ h6 {
     height: 35rem;
     
 }
-
+.contactos {
+    background-color: rgba(128, 128, 128, 0.363);
+    
+}
 
 /* Botn Carrito */
 .car-button{
@@ -221,7 +229,7 @@ h6 {
 	height: 60px;
 	width: 60px;
 	border-radius: 100%;
-	background-color: #588157;
+	background-color: #459443;
 	box-shadow: 0px 3px 12px rgba(0,0,0,0.2);
 	position: fixed;
 	bottom: 90px;
