@@ -3,10 +3,6 @@
     padding: 0;
     box-sizing: border-box;
 }
-header {
-	min-height: 10vh;
-	
-}
 body {
     background-image: url(../ASSETS/pasto.jpg);
     background-position: center center;
@@ -16,15 +12,15 @@ body {
     background-blend-mode: darken;
     color: white;
     font-size: larger;
+    min-height: 100vh
 }
-
-
 main {
-	min-height: 82vh;
+    min-height: 80vh
 }
 
 footer {
 background-color: black;
+min-height: 6.8vh;
 }
 
 h1 {
